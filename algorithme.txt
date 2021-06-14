@@ -1,0 +1,47 @@
+`###
+### Mustapha Bouhsen
+###
+### Algorithme de la fonction importData 
+###
+importData(start = date "AAAA-MM-JJ", end = date "AAAA-MM-JJ", path = Caractère)
+	Définir ("path") comme lieu pour importer les fichiers
+
+	Si (MM(start) = MM(end))
+		x <- importer le fichier correspondant à AAAA-MM(Start) 
+		x <- extraite de x les dates >= AAAA-MM-JJ(start) et les dates <= AAAA-MM-JJ(end)
+		
+	Afficher x #retourner plutôt ?
+
+	Sinon si (MM(start) + 1 = MM(end))
+		x <- importer le ficher correspondant à AAAA-MM(start)
+		x <- extraire de x les dates >= AAAA-MM-JJ(start)
+		y <- importer le fichier correspondant à AAAA-MM(end)
+		y <- extraire de y les dates <= AAAA-MM-JJ(end)
+		x <- fusionner les ligne de x et y 
+		
+	Afficher x
+
+	
+	sinon si (MM(start) + 1 < MM(end))
+		x <- importer le ficher correspondant à AAAA-MM(start)
+		x <- extraire de x les dates >= AAAA-MM-JJ(start)
+			pour (i  allant de MM(start) + 1 jusqu'à  MM(end) - 1)
+				x <- fusionner les lignes x avec (importation de fichier AAAA-i)
+				x
+			fin pour
+		y <- importer le fichier correspondant à AAAA-MM(end)
+		y <- extraire de y les dates >= AAAA-MM-JJ(end)
+		x <- fusionner les lignes de x et y
+	
+	Afficher x		
+		
+		
+Fin de importData
+
+
+
+#################### CORRECTION DU TRAVAIL LONGITUDINAL - algorithme.txt ########################
+# Conception et fonctionnalités
+# cette partie est sur 50 points 50/50
+
+## Commentaires correction automatique 
