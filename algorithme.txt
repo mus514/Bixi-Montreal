@@ -19,7 +19,7 @@ importData(start = date "AAAA-MM-JJ", end = date "AAAA-MM-JJ", path = Caractère
 		y <- extraire de y les dates <= AAAA-MM-JJ(end)
 		x <- fusionner les ligne de x et y 
 		
-	Afficher x
+	retourner x
 
 	
 	sinon si (MM(start) + 1 < MM(end))
