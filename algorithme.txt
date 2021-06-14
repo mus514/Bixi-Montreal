@@ -10,7 +10,7 @@ importData(start = date "AAAA-MM-JJ", end = date "AAAA-MM-JJ", path = Caractère
 		x <- importer le fichier correspondant à AAAA-MM(Start) 
 		x <- extraite de x les dates >= AAAA-MM-JJ(start) et les dates <= AAAA-MM-JJ(end)
 		
-	Afficher x #retourner plutôt ?
+	retourner x
 
 	Sinon si (MM(start) + 1 = MM(end))
 		x <- importer le ficher correspondant à AAAA-MM(start)
@@ -33,15 +33,9 @@ importData(start = date "AAAA-MM-JJ", end = date "AAAA-MM-JJ", path = Caractère
 		y <- extraire de y les dates >= AAAA-MM-JJ(end)
 		x <- fusionner les lignes de x et y
 	
-	Afficher x		
+	retourner x		
 		
 		
 Fin de importData
 
 
-
-#################### CORRECTION DU TRAVAIL LONGITUDINAL - algorithme.txt ########################
-# Conception et fonctionnalités
-# cette partie est sur 50 points 50/50
-
-## Commentaires correction automatique 
