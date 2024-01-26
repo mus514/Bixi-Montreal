@@ -27,6 +27,19 @@ importStations <- function(file)
   
 }
 
+write.file <- function(start, end)
+  {
+    n <- length((debut$mon + 1):(fin$mon + 1))
+    forme <- paste0("OD_", format(debut, "%Y"), "-")
+    x <- seq(as.Date(start) + 1, length = n , by = "+1 month") - 1
+    y <- 1:length(x)
+    for (i in y)
+    {
+      y[i] <- paste0(forme, format(x[i], "%m"), ".csv")
+    }
+    y
+  }
+
 ###
 ### importData(start, end, path = "")
 ###
@@ -83,19 +96,7 @@ importData <- function(start, end, path = "")
   f <- file.path(path, "/")
   debut <- as.POSIXlt(start)
   fin <- as.POSIXlt(end)
-  
-  write.file <- function(start, end)
-  {
-    n <- length((debut$mon + 1):(fin$mon + 1))
-    forme <- paste0("OD_", format(debut, "%Y"), "-")
-    x <- seq(as.Date(start) + 1, length = n , by = "+1 month") - 1
-    y <- 1:length(x)
-    for (i in y)
-    {
-      y[i] <- paste0(forme, format(x[i], "%m"), ".csv")
-    }
-    y
-  }
+
   
   if (debut$mon == fin$mon)
   {
